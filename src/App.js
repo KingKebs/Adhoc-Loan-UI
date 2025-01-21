@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Register from './components/Auth/Register';
+import Login from './components/Auth/Login';
+import Dashboard from './components/Dashboard/Dashboard';
+import ApplyLoan from './components/Loan/ApplyLoan';
+import LoanCalculator from './components/Loan/LoanCalculator';
+import Header from './components/Layout/Header';
+import Footer from './components/Layout/Footer';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header />
+      <Switch>
+        <Route path="/register" component={Register} />
+        <Route path="/login" component={Login} />
+        <Route path="/dashboard" component={Dashboard} />
+        <Route path="/apply-loan" component={ApplyLoan} />
+        <Route path="/loan-calculator" component={LoanCalculator} />
+      </Switch>
+      <Footer />
+    </Router>
   );
-}
+};
 
 export default App;
