@@ -1,0 +1,48 @@
+@media (max-width: 768px) {
+    .formContainer {
+      margin: 20px;
+      padding: var(--spacing-medium);
+    }
+
+    .navList {
+      flex-direction: column;
+      gap: var(--spacing-small);
+    }
+
+    .button {
+      padding: var(--spacing-small);
+    }
+  }
+
+.header {
+    background-color: var(--primary-color);
+    padding: var(--spacing-medium);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .navList {
+    list-style: none;
+    display: flex;
+    gap: var(--spacing-large);
+    margin: 0;
+    padding: 0;
+  }
+
+  .navLink {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: var(--spacing-small);
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s;
+  }
+
+  .navLink:hover {
+    background-color: var(--secondary-color);
+  }
+

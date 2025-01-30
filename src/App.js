@@ -10,6 +10,7 @@ import Footer from './components/Layout/Footer';
 
 const App = () => {
   return (
+    <div className="container">
     <Router>
       <Header />
       <Switch>
@@ -21,6 +22,7 @@ const App = () => {
       </Switch>
       <Footer />
     </Router>
+  </div>
   );
 };
 
